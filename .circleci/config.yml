@@ -1,0 +1,16 @@
+# This code is licensed from CircleCI to the user under the MIT license.
+# See here for details: https://circleci.com/developer/orbs/licensing
+version: 2.1
+description: "Elastic Logstash Kibana"
+
+# Use a package of configuration called an orb.
+orbs:
+  # Declare a dependency on the welcome-orb
+  elk: circleci/docker@1.5.0
+# Orchestrate or schedule a set of jobs
+workflows:
+  # Name the workflow "welcome"
+  elk:
+    # Run the welcome/run job in its own container
+    jobs:
+      - elk/run
